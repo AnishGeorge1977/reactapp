@@ -30,6 +30,20 @@ module.exports = {
 
   module: {
     rules: [
+      //CSS Loader
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      },
+      //Image Loader
+      {
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+        use: [
+            {
+                loader: 'file-loader'
+            },
+        ]
+      },
       // JS files
       {
         test: /\.jsx?$/,
